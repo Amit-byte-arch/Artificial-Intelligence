@@ -1,1 +1,38 @@
+Word2Vec (Word to Vector) is an NLP technique that converts words into numerical vectors (arrays of numbers) so that a machine can understand 
+the meaning and relationships between words.
+Simple example
+Instead of representing:
+King
+Queen
+Man
+Woman
 
+as simple word counts, Word2Vec represents each word as a vector:
+King  → [0.25, 0.71, -0.13, ...]
+Queen → [0.28, 0.69, -0.10, ...]
+Man   → [0.12, 0.45, -0.20, ...]
+Woman → [0.15, 0.43, -0.18, ...]
+
+The important point is that similar words get similar vector representations.
+
+For example:
+King ↔ Queen
+Man  ↔ Woman
+
+will have vectors that are closer to each other in the vector space.
+Interview definition
+Word2Vec is an NLP algorithm that represents words as dense numerical vectors based on their context, allowing machines to capture semantic relationships 
+and similarities between words.
+
+How it differs from TF-IDF
+TF-IDF	Word2Vec
+Represents words using importance scores	Represents words using dense vectors
+Mainly based on word frequency	Based on surrounding context
+Doesn't capture meaning very well	Captures semantic relationships
+Sparse matrix	Dense vectors
+Example: 0, 0, 0.45, 0, 1...	Example: [0.21, -0.45, 0.73...]
+
+
+Key concept to remember:
+TF-IDF → importance of a word
+Word2Vec → meaning/relationship of a word
